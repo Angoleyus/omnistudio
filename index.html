@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniStudio | The Digital Atelier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">OMNISTUDIO</div>
+        <div class="nav-links">
+            <a href="#atelier">The Atelier</a>
+            <a href="#process">Process</a>
+            <a href="#contact" class="btn-outline">Request Invite</a>
+        </div>
+    </nav>
+
+    <main class="smooth-scroll-wrapper">
+        <section class="hero" id="atelier">
+            <div class="hero-content">
+                <p class="subtitle">Artisanal digital photography.</p>
+                <h1 class="title">Elevate your<br>brand's visual<br><em>soul.</em></h1>
+                <p class="description">We transform raw product imagery into breathtaking editorial masterpieces using advanced human-guided AI.</p>
+                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Commission a Piece</button>
+            </div>
+            <div class="hero-image-wrapper">
+                <!-- Placeholder for high end aesthetic -->
+                <img src="https://images.unsplash.com/photo-1595535373192-fc8935ba1866?q=80&w=1000&auto=format&fit=crop" alt="Luxury Perfume Editorial" class="hero-img">
+            </div>
+        </section>
+
+        <section class="demonstration" id="process">
+            <div class="section-header">
+                <h2>The Transformation</h2>
+                <p>Slide to witness the alchemy.</p>
+            </div>
+            <div class="slider-container">
+                <div class="slider-image-wrapper before">
+                    <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1000&auto=format&fit=crop" alt="Raw product photo">
+                    <span class="label">Raw</span>
+                </div>
+                <div class="slider-image-wrapper after">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop" alt="Editorial AI render">
+                    <span class="label">OmniStudio</span>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="slider" id="compare-slider">
+                <div class="slider-line" id="slider-line">
+                    <div class="slider-handle"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dossier-section" id="dossier">
+            <div class="dossier-content">
+                <div class="dossier-text">
+                    <h2>The Brand Elevation Dossier</h2>
+                    <p>We do not just hand you a photograph. We deliver a comprehensive strategic asset designed to dominate your market.</p>
+                    <ul class="dossier-list">
+                        <li>
+                            <strong>01. Visual Alchemy</strong>
+                            <span>Three breathtaking, AI-rendered editorial photographs of your raw product.</span>
+                        </li>
+                        <li>
+                            <strong>02. Market Intelligence</strong>
+                            <span>A deep-dive web analysis of your competitors, current visual trends, and pricing gaps.</span>
+                        </li>
+                        <li>
+                            <strong>03. Positioning Strategy</strong>
+                            <span>Actionable insights on how to leverage your new visuals to command premium pricing.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dossier-visual">
+                    <div class="dossier-card">
+                        <div class="dossier-card-header">CONFIDENTIAL DOSSIER</div>
+                        <div class="dossier-card-body">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-image"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="concierge-form" id="contact">
+            <div class="form-container">
+                <h2>Experience the Atelier</h2>
+                <p>Upload a photo of your product. We will select a limited number of brands each week to receive a complimentary editorial render.</p>
+                
+                <form id="lead-form" action="https://formsubmit.co/your-email@example.com" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="input-group">
+                        <label for="email">Brand Email</label>
+                        <input type="email" id="email" name="email" required placeholder="hello@yourbrand.com">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="product-image">Product Photography (Raw)</label>
+                        <input type="file" id="product-image" name="attachment" accept="image/*" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary full-width">Request Complimentary Render</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
